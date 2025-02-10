@@ -6,8 +6,8 @@ pipeline {
             steps{
                 sh '''
                     docker build -t selenium-assignment .
-                    python --version
                     docker run selenium-assignment
+                    python --version
                 '''
             }
         }
