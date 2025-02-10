@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY $srcDir/facebook-login.py .
 
-CMD ["python", "fcebook-login.py"]
+CMD ["python", "facebook-login.py"]
