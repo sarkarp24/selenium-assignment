@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import shutil
 import tempfile 
 import time
@@ -17,8 +18,12 @@ options = Options()
 user_data_dir = tempfile.mkdtemp()
 options.add_argument(f"--user-data-dir={user_data_dir}")  # Use f-string
 
-service_option = Service("/usr/bin/chromedriver")
-driver = webdriver.Chrome(service=service_option)
+#service_option = Service("/usr/bin/chromedriver")
+#driver = webdriver.Chrome(service=service_option)
+
+
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 #driver = webdriver.Chrome("/home/ubuntu/chromedriver-linux64/chromedriver")
 #driver = webdriver.Chrome()
