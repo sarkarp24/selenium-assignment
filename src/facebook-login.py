@@ -17,7 +17,7 @@ options = Options()
 user_data_dir = tempfile.mkdtemp()
 options.add_argument(f"--user-data-dir={user_data_dir}")  # Use f-string
 
-service_option = Service("/bin/chromedriver")
+service_option = Service("/home/ubuntu/chromedriver-linux64/chromedriver")
 driver = webdriver.Chrome(service=service_option)
 #driver = webdriver.Chrome()
 driver.get("https://www.facebook.com/")
